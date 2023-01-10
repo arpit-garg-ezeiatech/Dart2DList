@@ -23,7 +23,7 @@ void main()
             List<List<int>> twoDList = List.generate(rowNumber, (i) => List(columnNumber), growable: false);
             for( var i = 0 ; i < columnNumber; i++ ) {
                 for( var j = 0 ; i < rowNumber; j++ ) {
-                 twoDList[rowNumber][columnNumber] = rng.nextInt(100);
+                 twoDList[i][j] = rng.nextInt(100);
                 }   
             }
             print("List generated\n");
@@ -37,11 +37,11 @@ void main()
                 List<int> sortList = new List<int>.generate(rowNumber);
                 if (columnSort != null) {
                     for( var j = 0 ; i < rowNumber; j++ ) {
-                        array[rowNumber] = twoDList[rowNumber][columnSort]
+                        array[j] = twoDList[j][columnSort]
                     }
                     sortList.sort();
                     for( var j = 0 ; i < rowNumber; j++ ) {
-                        twoDList[rowNumber][columnSort] = array[rowNumber];
+                        twoDList[j][columnSort] = array[j];
                     }
                     print("List Sorted\n");
                     print(tList); 
